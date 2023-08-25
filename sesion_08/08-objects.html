@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        /*
+        const product = {
+            name: 'socks',
+            price: 1090
+        };
+
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        //creamos una nueva propiedad al object
+        product.newProperty = true;
+        console.log(product);
+
+        //eliminar una propiedad de un object
+        delete product.newProperty
+        console.log(product);
+        */
+
+        /*
+        const product2 = {
+            name: 'shirt',
+            ['delivery-time'] : '1 day',
+            rating: {
+                stars: 4.5,
+                count: 87
+            },
+            fun: function function1() {
+                console.log('Function inside object');
+            }
+        };
+
+        console.log(product2);
+        console.log(product2.name);
+        console.log(product2['name']);
+        console.log(product2['delivery-time']);
+        console.log(product2.rating.stars);
+
+        product2.fun();
+
+        
+        console.log(JSON.stringify(product2));
+
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString));
+        */
+
+        const object4 = {
+            message: 'Good job!',
+            price: 799
+        };
+
+        //desestructuración: es una forma más fácil de quitar propiedades a un objeto
+        const { message, price } = object4;
+        console.log(message);
+        console.log(price);
+
+        const object5 = {
+            message: message,
+            method() {
+                console.log("this is a method");
+            }
+        }
+        console.log(object5);
+        object5.method();
+    </script>
+</body>
+</html>
