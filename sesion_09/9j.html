@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="9j.js"></script>
 </head>
 <body>
-    <button>1</button>
-    <button>2</button>
+    <p class="js-operacion"></p>
+    <div>
+        <button onclick="
+            actualizarOperacion(1)    
+        ">1</button>
+        <button onclick="
+            actualizarOperacion(2)    
+        ">2</button>
+        <button onclick="
+            actualizarOperacion(3)    
+        ">3</button>
+        <button onclick="
+            actualizarOperacion('+')    
+        ">+</button>    
+    </div>
+
+    <div>
+        <button onclick="
+            actualizarOperacion(4)    
+        ">4</button>
+        <button onclick="
+            actualizarOperacion(5)    
+        ">5</button>
+        <button onclick="
+            actualizarOperacion(6)    
+        ">6</button>
+        <button onclick="
+            actualizarOperacion('-')    
+        ">-</button>
+    </div>
+    
+    <style>
+        div {
+            margin-bottom: 12px;
+        }
+    </style>
 </body>
 </html>
