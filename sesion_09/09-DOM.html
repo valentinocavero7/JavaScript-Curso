@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <button>hello</button>
+    <button class="js-button">Second Button</button>
+   <script>
+
+    // querySelecto(): nos permite obtener cualquier elemento del la pagina y ponerlo dentro del js
+    console.log(document.querySelector('button'));
+    // cuando un elemento del HTML está dentro del js, este pasa a ser un object
+
+    console.log(document.querySelector('button').innerHTML);
+    document.querySelector('button')
+        .innerHTML = "Changed";
+
+    // cuando empieza con un punto, quiere decir que buscará un elemento que coincida con esa clase
+    const buttonElement = document.querySelector('.js-button');
+    console.log(buttonElement);
+    console.log(document.querySelector('.js-button').innerHTML);
+
+
+
+    /*
+    
+    //document.title = "Good job!";
+
+    //devuelve todo el body del html
+    console.log(document.body.innerHTML);
+
+    //cambiamos la estructura de nuestro HTML
+    document.body.innerHTML = '<button>Good job!</button>'
+    */
+    
+   </script> 
+</body>
+</html>
