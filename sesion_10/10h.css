@@ -1,0 +1,18 @@
+input {
+    padding: 5px;
+}
+
+button {
+    background-color: rgb(12, 182, 12);
+    color: white;
+    border: none;
+    padding: 6px 10px;
+}
+
+.js-message {
+    color: red;
+}
+
+body {
+    font-family: Arial;
+}
