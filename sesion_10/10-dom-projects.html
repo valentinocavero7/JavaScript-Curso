@@ -2,13 +2,15 @@
 <html>
 <head>
     <title>DOM Projects</title>
+    <script src="10-dom.projects.js"></script>
+    <link rel="stylesheet" href="10-dom-projects.css">
 </head>
 <body>
 
     <p>YouTube Suscribe Button</p>
     <button onclick="
         Subscribe();
-    " class="jb-subscribe-button">
+    " class="jb-subscribe-button subscribe-button">
         Subscribe
     </button>
 
@@ -17,37 +19,10 @@
     <p>Orders over $40 = FREE shipping.</p>
     <input 
     onkeydown="enter(event.key)"
-    placeholder="Cost of order" class="input-price">
-    <button class="js-button-calculate" onclick="
+    placeholder="Cost of order" class="input-price cost-input">
+    <button class="js-button-calculate calculate-button" onclick="
         price();
     ">Calculate</button>
     <p class="js-result"></p>
-
-    <script>
-        function Subscribe() {
-            const buttonElement = document.querySelector('.jb-subscribe-button')
-            if (buttonElement.innerText === 'Subscribe') {
-                buttonElement.innerHTML = 'Subscribed';
-            } else {
-                buttonElement.innerHTML = 'Subscribe';
-            }
-        }
-
-        function price() {
-            let valor = document.querySelector('.input-price');
-            console.log(parseInt(valor.value));
-            let valorFinal = Number(valor.value);
-            if(valorFinal < 40) {
-               valorFinal += 10;
-            }
-            document.querySelector('.js-result').innerHTML = '$ ' + valorFinal
-        }
-
-        function enter(key) {
-            if(key === 'Enter') {
-                price();
-            }
-        }
-    </script>
 </body>
 </html>
