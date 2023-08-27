@@ -1,0 +1,16 @@
+button {
+    background-color: rgb(231, 231, 231);
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin-right: 6px;
+}
+
+body {
+    font-family: Arial;
+}
+
+.button-change {
+    background-color: black;
+    color: white;
+}
