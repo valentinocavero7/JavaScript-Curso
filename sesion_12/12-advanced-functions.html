@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // luego de 3 segundos se ejecutará está funcion
+        setTimeout( function() {
+            console.log('timeout');
+        }, 3000);
+
+        console.log('next line'); // esta linea se mostrará primero
+        // aqui entramos a hablar de un codigo asincronico
+
+
+        // setInterval recibre dos parametros
+        // el primer parametro es A function we wanna run in the future.
+
+        setInterval(function() {
+            console.log('Interval');
+        }, 3000);
+        // esta funciin se ejecutara cada tres segundos
+        // acomparacion de la otra funcion que solo se ejecuta una vez
+
+        console.log('next line 2');
+    </script>
+</body>
+</html>
