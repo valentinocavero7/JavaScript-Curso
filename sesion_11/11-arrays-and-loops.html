@@ -8,12 +8,49 @@
 <body>
     
     <script>
-        /*
-        un array es un objeto, pero es solo un tipo especial de objeto
-        */
-        [1, 'hello', { name : 'socks'}, [1, 2]]
-        console.log(typeof [1, 2]);
-        console.log(Array.isArray([1, 2])); // return a boolean
+                /*
+                un array es un objeto, pero es solo un tipo especial de objeto
+                */
+                [1, 'hello', { name : 'socks'}, [1, 2]]
+                //console.log(typeof [1, 2]);
+                //console.log(Array.isArray([1, 2])); // return a boolean
+
+
+                // los arrays son referencias
+                const arrays1 = [1, 2, 3];
+                /*
+                Esta variable en realidad no contiene los valores 1, 2, 3
+                Esta matriz se guarda en algún lugar de la memoria de la computadora.
+                Y esta variable solo contiene una referencia que apunta a dónde está
+                la matriz en la memoria.
+                */
+
+                const arrays2 = arrays1;
+                /*
+                El array2 no contiene una copia de los valores, solo contiene una 
+                copia de la referencia. Entonces ambas variables apuntan a la misma matriz.
+                */
+
+
+               //arrays2.push(4);
+               // aqui agregamos el numero 4 a nuestro arrays2, pero tambien se modificara el arrays1
+               // ya que apuntan a la misma direccion es el espacio de memoria
+               console.log(arrays1); //  [1, 2, 3, 4]
+               console.log(arrays2); //  [1, 2, 3, 4]
+
+               
+               const arrays3 = arrays1.slice(); // slice crea una copia del array, pero esta vez apuntan a direcciones direfentes de la memoria
+               arrays3.push(4);
+               console.log(arrays1);
+               console.log(arrays3); 
+        
+        for (let i = 0; i <= 10; i++) {
+            if(i == 3) continue;
+            // continue: saltamos una iteracion del ciclo
+            console.log(i);
+            if(i == 8) break;
+            
+        }
     </script>
 </body>
 </html>
